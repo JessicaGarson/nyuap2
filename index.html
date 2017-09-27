@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Advanced Python</h1>
+					<p>
+						<small>Class 2</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ol>
+						<li>Business Items</li>
+						<li>Git</li>
+						<li>Code Share</li>
+						<li>Break</li>
+						<li>Internet - How Does it Work?</li>
+						<li>Break</li>
+						<li>Intro to Flask</li>
+						<li>Preview of Next Class</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Business Items</h2>
+					A syllabus has been added to the class repo. A few assignments are added as well. Let's talk about these.
+				</section>
+
+				<section>
+					<h1>Git</h1>
+				</section>
+
+				<section>
+					<h2>Data Types!</h2>
+					We are going to write a simple program that uses all three of python's data types.
+				</section>
+
+				<section>
+					<h2>Code Review</h2>
+					We will be using github to review each others code.
+				</section>
+
+				<section>
+					<h2>Branching vs Forking</h2>
+					Why?
+				</section>
+
+				<section>
+					<h2>Mapping Git Flow</h2>
+					In small groups we'll be mapping git flow.
+				</section>
+
+				<section>
+					<h2>Code Share</h2>
+					Anyone want to show what they are working on for the text based games.
+				</section>
+
+				<section>
+					<h1>10 Minute Break</h1>
+				</section>
+
+				<section>
+					<h1>How the Internet Works</h1>
+				</section>
+
+				<section>
+					<h2>What is the Internet?</h2>
+					Internet is basically just a marriage of hardware and protocols.
+				</section>
+
+				<section>
+					<h2>ARPANET</h2>
+					ARPANET - the grandfather to the internet. It’s just a network but the internet is a internet of internets. This started in the 1970s.
+				</section>
+
+				<section>
+					<h2>How Does The Internet Connect?</h2>
+					The internet is always changing as new networks come and old ones go. There are satellite networks and land networks connected via submarine cables. This can be even as small as a home network, or local area network (like an office).
+				</section>
+
+				<section>
+					<h2>  Network of Networks </h2>
+					<img alt="the internet" src="./img/the_internet.png">
+				</section>
+
+				<section>
+					<h2> Submarine Cables </h2>
+					<img alt="submarine cables" src="./img/Screen Shot 2017-09-25 at 9.44.45 PM.png">
+				</section>
+
+			<section>
+				<h2>Clients and Servers</h2>
+				The internet is made up of two types of machines clients and server. Every machine is ether a client or a server but many machines can be both.
+			</section>
+
+			<section>
+				<h2>Clients</h2>
+				The client requests information from a server. The client starts with the local server and goes to a regional and than national server. It goes up the chain until it gets the information you need is.
+			</section>
+
+			<section>
+				<h2>Servers</h2>
+				A server is a computer program or a device that provides functionality for other programs or devices(clients).
+			</section>
+
+			<section>
+				<h2>Packets</h2>
+				When the information is being sent it needs to broken into many small pieces which are called packet. Packets don't always go in order and sometimes the same packets are sent separately in different places. Packets are reassembled based on the instructions that get sent.
+			</section>
+
+			<section>
+				<h2>When you go to a website what happens?</h2>
+				The domain name system (DNS) translates hostnames such as (www.google.com) the ip address to a domain name. This happens via an DNS resolver.
+			</section>
+
+			<section>
+				<h2>IP - Internet Protocol</h2>
+				The internet protocol handles address and routing.
+			</section>
+
+			<section>
+				<h2>TCP - Transfer Control Protocol</h2>
+				Handles reliable delivery
+			</section>
+
+			<section>
+				<h2>HTTP - HyperText Transfer Protocol</h2>
+				HTTP is what clients use to make requests from servers.
+			</section>
+
+			<section>
+				<h2>So what we do we request?</h2>
+				We request things like HTML, images, binary data, or dynamically generated query results.
+			</section>
+
+			<section>
+				<h2> Types of Requests</h2>
+				<p>
+					GET - Requests data from a specified resource
+				</p>
+				<p>
+				POST - Submits data to be processed to a specified resource
+				</p>
+			</section>
+
+			<section>
+				<h2> GET </h2>
+				Can be cached, remain in the browser history, they can be bookmarked.
+				They should never be used when dealing with sensitive data and they have length restrictions.
+				These requests should be used only to retrieve data.
+			</section>
+
+			<section>
+				<h2> POST </h2>
+				These requests are never cached and don't remain in the browser history. They can't be bookmarked and have have no restrictions on data length.
+			</section>
+
+			<section>
+				<h2> We Can See This Happen </h2>
+				Let's load up a site and watch this in our developer tools console			</section>
+			</section>
+
+			<section>
+				<h2> Other Types of Requests</h2>
+				<p>
+					HEAD - Same as GET but returns only HTTP headers and no document body
+				</p>
+				<p>
+					PUT - Uploads a representation of the specified URI
+				</p>
+				<p>
+					DELETE - Deletes the specified resource
+				</p>
+				<p>
+					OPTIONS - Returns the HTTP methods that the server supports
+				</p>
+				<p>
+					CONNECT - Converts the request connection to a transparent TCP/IP tunnel
+				</p>
+			</section>
+
+			<section>
+				<h1> Response </h1>
+			<pre><code class="http" data-trim contenteditable>
+				HTTP/1.1 200 OK
+				<html>
+					<h1>Intro to Flask</h1>
+				</html>
+			</pre></code>
+			</section>
+
+			<section>
+				<h2> We Do This Every Day </h2>
+				<p>
+					When you view a tweet you use the GET method.
+				</p>
+				<p>
+					When you write a tweet you use the POST method.
+				</p>
+				<p>
+					When you delete a tweet you use the DELETE method.
+				</p>
+			</section>
+
+			<section>
+				<h2> HTTP Messages </h2>
+				<p>
+					100 level - Information
+				</p>
+				<p>
+					200 level - Successful
+				</p>
+				<p>
+					300 level - Redirection
+				</p>
+				<p>
+					400 level - Client Error
+				</p>
+				<p>
+					500 level - Server Errors
+				</p>
+			</section>
+
+			<section>
+				<h1> HTTP Headers </h1>
+			<pre><code class="http" data-trim contenteditable>
+GET /home.html HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+			</pre></code>
+			</section>
+
+			<section>
+				<h1>10 Minute Break</h1>
+			</section>
+
+			<section>
+				<h1>Flask</h1>
+			</section>
+
+      <section>
+				<h1>What is Flask?</h1>
+			</section>
+
+      <section>
+				<h1>Why are we Focusing on Flask?</h1>
+			</section>
+
+      <section>
+				<h2>Flask vs Django</h2>
+        What are the differences between the two.
+			</section>
+
+			<section>
+				<h2>Virtual Environments</h2>
+        When doing web development, having a virtual environment helps keep us the same page.
+			</section>
+
+      <section>
+				<h1>Flask Code Demo</h1>
+			</section>
+
+      <section>
+				<h2>Preview of Next Class</h2>
+        We are going to be building a flask site from site. We'll be listing all the things we need to build a site and assign tickets to build a site as a class.
+			</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
